@@ -1,0 +1,22 @@
+{
+  "name": "hyper-cobalt-next-dark",
+  "version": "1.0.0",
+  "description": "Hyper theme based on the dark version of Cobalt Next VS Code Theme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidleininger/hyper-cobalt-next-dark.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "colors",
+    "hyper",
+    "hyper-theme",
+    "cobalt",
+    "next"
+  ],
+  "author": "davidleininger",
+  "license": "MIT"
+}
