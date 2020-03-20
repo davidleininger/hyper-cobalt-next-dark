@@ -48,6 +48,9 @@ module.exports.decorateConfig = config => {
   const tabText = lightBlack
   const tabTextActive = white
   const dividerBg = black
+  const scrollTrack = '#000000'
+  const scrollThumb = '#5fb3b344'
+  const scrollHover = '#5fb3b377'
 
   return Object.assign({}, config, {
     foregroundColor,
@@ -63,6 +66,7 @@ module.exports.decorateConfig = config => {
       }
     `,
     css: `
+      ${config.css || ''}
       #hyper {
         border: 1px solid ${borderColor};
       }
@@ -105,7 +109,36 @@ module.exports.decorateConfig = config => {
       .splitpane_divider[style] {
         background-color: ${dividerBg} !important;
       }
-      ${config.css || ''}
+      .xterm-viewport::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none;
+      }
+      .xterm-viewport::-webkit-scrollbar-corner {
+          background-color: transparent;
+      }
+      .xterm-viewport::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+      }
+      .xterm-viewport::-webkit-scrollbar-track,
+      .xterm-viewport::-webkit-scrollbar-thumb {
+          -webkit-border-radius: 8px;
+      }
+      .xterm-viewport::-webkit-scrollbar-track {
+          background-color: ${scrollTrack};
+      }
+      .xterm-viewport::-webkit-scrollbar-thumb {
+          background-color: ${scrollThumb};
+          -webkit-box-shadow: none;
+      }
+      .xterm-viewport::-webkit-scrollbar-thumb:hover {
+          background-color: ${scrollHover};
+          -webkit-box-shadow: none;
+      }
+      .xterm .xterm-viewport {
+          overflow-y: auto;
+      }
     `
   })
 }
