@@ -2,6 +2,7 @@
 
 const bg = "#0f1c23"
 const black = "#343d46"
+const darkblack = "#1b2b34"
 const red = "#ed6f7d"
 const green = "#99c794"
 const yellow = "#fac863"
@@ -43,7 +44,7 @@ module.exports.decorateConfig = config => {
   const cursorColor = cyan
   const borderColor = bg
   const selectionColor = 'rgba(95, 179, 169, .3)'
-  const tabNavBg = black
+  const tabNavBg = darkblack
   const tabText = lightBlack
   const tabTextActive = white
   const dividerBg = black
