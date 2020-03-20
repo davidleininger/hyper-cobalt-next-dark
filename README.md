@@ -5,7 +5,7 @@
 ### Install
 
 1. Open Hyper's preferences with `Cmd + ,` (or manually at `~/.hyper.js`) with your editor.
-2. Update your list of plugins to include `hyper-cobalt-next`, like so:
+2. Update your list of plugins to include `hyper-cobalt-next-dark`, like so:
 
   ```js
 plugins: [
