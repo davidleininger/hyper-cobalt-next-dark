@@ -101,7 +101,7 @@ module.exports.decorateConfig = config => {
       .tab_icon:hover {
         background: ${tabNavBg};
       }
-      #hyper .splitpane_divider {
+      .splitpane_divider[style] {
         background-color: ${dividerBg} !important;
       }
       ${config.css || ''}
